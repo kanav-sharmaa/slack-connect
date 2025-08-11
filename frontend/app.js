@@ -1,7 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
-const backendURL = process.env.BACKEND_URL;
 
+const backendURL='https://slack-connect-ou0b.onrender.com';
 
 const connectBtn = document.getElementById("connect-btn");
 const appDiv = document.getElementById("app");
