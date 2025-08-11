@@ -24,19 +24,7 @@ router.get('/slack/callback', async (req, res) => {
         });
         if (resp.data.ok) {
             await saveTokens(resp.data.access_token, resp.data.refresh_token, Date.now() + 3500 * 1000);
-            res.send(`
-                <html>
-                    <body>
-                        <h1>Connected to Slack successfully!</h1>
-                        <p>You can now close this window and return to the application.</p>
-                        <script>
-                            setTimeout(() => {
-                                window.close();
-                            }, 2000);
-                        </script>
-                    </body>
-                </html>
-            `);
+            res.redirect("https://slack-connect-git-main-kanav-sharmaas-projects.vercel.app/");
         } else {
             res.status(400).send(resp.data.error);
         }
