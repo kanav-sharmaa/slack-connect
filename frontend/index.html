@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SlackConnect</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Slack Connect</h1>
+        <button id="connect-btn">Connect to Slack</button>
+
+        <div id="app" style="display:none;">
+            <label for="channel-select">Select Channel:</label>
+            <select id="channel-select"></select>
+
+            <label for="message-text">Message:</label>
+            <textarea id="message-text" rows="4"></textarea>
+
+            <div class="actions">
+                <button id="send-now-btn">Send Now</button>
+                <button id="schedule-btn">Schedule Message</button>
+            </div>
+
+            <div id="schedule-section" style="display:none;">
+                <label for="schedule-datetime">Schedule Date & Time:</label>
+                <input type="datetime-local" id="schedule-datetime" />
+                <button id="confirm-schedule-btn">Confirm Schedule</button>
+                <button id="cancel-schedule-btn">Cancel</button>
+            </div>
+
+            <h2>Scheduled Messages</h2>
+            <ul id="scheduled-list"></ul>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
