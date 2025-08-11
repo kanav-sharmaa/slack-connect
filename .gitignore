@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 backend/slack.db
 backend/.env
+
+.dist
+.history
