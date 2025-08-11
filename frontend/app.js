@@ -1,4 +1,7 @@
-const backendURL = "https://4000-imx8bjubxetzk58k00jp0-8b3ff018.manusvm.computer";
+import dotenv from 'dotenv';
+dotenv.config();
+const backendURL = process.env.BACKEND_URL;
+
 
 const connectBtn = document.getElementById("connect-btn");
 const appDiv = document.getElementById("app");
