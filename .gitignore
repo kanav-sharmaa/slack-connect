@@ -28,4 +28,4 @@ coverage
 backend/slack.db
 
 .dist
-.history
+.history/
